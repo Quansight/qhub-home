@@ -1,20 +1,19 @@
-# qhub frontend
+# Sqribe: NDE of the future.
 
-This repo houses the qhub frontend moving forward. This effort will house a backend
-written in fastAPI, and a fronend in Vue, with additional components.
+Sqribe is the working name for Qhub, and is the application that is served up to users.
+It will be a way for people to contibute to curated open-source documentation surrounding the
+python and pydata ecosystem, along with a portal to Sqribe's deployment tool.
 
-`prototype` houses notebooks that have been used to prototype data
+## Tools
 
-`app` houses the fastAPI backend
+### Backend
 
-## Running with dockerfile
+I chose [Dino](https://deno.land/) as my tool to write this application. This was due in part to the fact that
+it is interesting, cleaner than `npm`, and is far more community-driven open source as opposed to something like V8.
+That being said, the [Deno 1.0](https://deno.land/v1) Release Candidate details the specific internals of the system.
 
-`docker build -t <image_name> .`
+### Frontend
 
-`docker run -d --name <container_name> -p 8000:8000 <image_name>`
+I will choose [Nuxt.js](https://nuxtjs.org/) as the tool for my frontend. I will begin by using Vue and then move to Nuxt over time.
 
-Then, navigate to `0.0.0.0:8000/docs` in the web browser to see the api view.
 
-## Running without dockerfile 
-
-`cd` to `src` and run `python main.py`
