@@ -1,6 +1,14 @@
 import { Drash } from "https://deno.land/x/drash@v1.0.3/mod.ts";
 import HomeResource from "./home_resource.ts";
+import Vue from 'https://cdn.pika.dev/vue@^2.6.11';
 
+const app = new Vue({
+  el: "#app",
+  data: {
+    title: "Ani passed data in here",
+    description: "Ani is secure here",
+  },
+});
 /*
  * The following variables set the default host and port
  * if not set in the `.env` file.
