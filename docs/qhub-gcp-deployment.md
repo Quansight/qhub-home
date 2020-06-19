@@ -110,7 +110,10 @@ google_cloud_platform:
       max_nodes: 5
 ```
 
-To interact with Google Cloud resources and perform a QHub deployment, you must provide the identifying project information for every request. On GCP, a project is identified by its project ID and project number. To get the project ID and the project number, you will need to go to your GCP Dashboard as described [here](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) and fill in the `project_id` line in the configuration file.
+To interact with Google Cloud resources and perform a QHub deployment, you must provide the identifying project information for every request. On GCP, a project is identified by its project ID and project number. GCP deployment requires the project id and service account credentials.
+
+`GOOGLE_CREDENTIALS` must be the contents of the json credentials file with sufficient permissions to create all resources on the cluster. Detailed instructions on [creating service accounts can be found here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys). `project_id` is a short string of around 32 characters that defines your project uniquely. To get the project ID and the project number, you will need to go to your GCP Dashboard as described [here](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) and fill in the `project_id` line in the configuration file. The service account will need `Project->Editor` permissions. In addition, you will need to enable the `Cloud Resource Manager API`. The QHub deployment will fail without the api enabled.
+
 
 For GCP, as well as for the other cloud service providers, adding an additional node group is as easy as adding a node group such as `high-memory`.
 
@@ -186,13 +189,30 @@ profiles:
       image: "quansight/qhub-dask-worker:ce548a6b13bdcf494ccfa2a08a495b090f973cfe"
 ```
 
-For each `profiles.jupyterlab` is a named jupyterlab profile. It
-closely follows the
-[KubeSpawner](https://jupyterhub-kubespawner.readthedocs.io/en/latest/spawner.html)
-api. The only exception is that two keys are added `users` and
-`groups` which allow restriction of profiles to  a given set of groups and users. We recommend using groups to manage profile access.
+For each `profiles.jupyterlab` is a named jupyterlab profile. It closely follows the [KubeSpawner](https://jupyterhub kubespawner.readthedocs.io/en/latest/spawner.html) api. The only exception is that two keys are added `users` and `groups` which allow restriction of profiles to  a given set of groups and users. We recommend using groups to manage profile access. Finally, we allow for configuration of the [dask workers](https://distributed.dask.org/en/latest/worker.html). In general, similar to the jupyterlab instances, you only need to configure the cores and memory.
 
-Finally we allow for configuration of the dask workers. In general
-similar to the jupyterlab instances you only need to configuration the
-cores and memory.
+## Environments
 
+An environment generally refers to a directory on your machine that contains a set of packages/dependencies that the program/application you want to run needs. One might think of a programming environment similar to a namespace as used in computer science, which refers to an abstract container (or environment) created to hold a logical grouping of names. 
+
+In your configuration file, you can add to the list of dependencies, as well as change the name of your environment if you would like to. 
+
+
+```yaml
+environments:
+  "environment-default.yaml":
+    name: default
+    channels:
+      - conda-forge
+      - defaults
+    dependencies:
+      - python=3.7
+      - ipykernel
+      - ipywidgets
+      - dask==2.14.0
+      - distributed==2.14.0
+      - dask-gateway=0.6.1
+      - numpy
+      - numba
+      - pandas
+```
