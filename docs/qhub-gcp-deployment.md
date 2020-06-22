@@ -216,3 +216,6 @@ environments:
       - numba
       - pandas
 ```
+
+
+After you edit the configuration file, run `./scripts/00-guided-install.sh` to complete the QHub GCP deployment steps!
