@@ -1,15 +1,15 @@
 # QHub Deployment on Google Cloud Platform (GCP)
 
-This quide walks you through the steps to create a QHub deployment on GCP. **Deployments** represent a set of multiple, identical Pods with no unique identities. A Deployment runs multiple replicas of your application and automatically replaces any instances that fail or become unresponsive. In this way, Deployments help ensure that one or more instances of your application are available to serve user requests. Deployments are managed by the Kubernetes Deployment controller.
+This quide walks you through the steps to create a QHub deployment on GCP. **Deployments** represent a set of multiple, identical Pods with no unique identities. A deployment runs multiple replicas of your application and automatically replaces any instances that fail or become unresponsive. In this way, deployments help ensure that one or more instances of your application are available to serve user requests. Deployments are managed by the Kubernetes Deployment controller.
 
 
 A **configuration** defines the structure of your deployment, including the type and properties of the resources that are part of the deployment, any templates the configuration should use, and additional subfiles that can be executed to create your final configuration. You must specify a configuration in order to create a deployment. A configuration allows you to define a variety of resources and features that you would like to setup for your deployment. Let's have a closer look into how you can configure your QHub deployment for GCP. 
 
-## 1. Configuration
+## Configuration
 
 You can start the deployment process by providing the configuration details of your project. To abstract away some of the complexities of writing up your own configuration file for QHub deployment on GCP, the configuration file, `qhub-ops-config.yaml`, written in the [YAML](https://yaml.org/about.html) syntax, is provided for you. The configuration file consists of three main sections: **General, Security, Provider Infrastructure** that you need to edit with your project and authentication details. 
     
-### General 
+### 1. General 
 
 This section allows setting up the general information about your project. 
 
@@ -30,9 +30,9 @@ domain: "gcp.qhub.dev"
 * `domain` is the top level url to put qhub and future services under such a monitoring. In this example, `gcp.qhub.dev` would be the domain for qhub to be exposed under. 
 
 
-### Security
+### 2. Security
 
-The security section of the configuration file is for configuring security and authentication details, relating to your qhub deployment. You will need to provide your Google Cloud [Service Account](https://cloud.google.com/iam/docs/service-accounts) credentials on the appropriate lines of the configuration file as shown below. 
+The security section of the configuration file is for configuring security and authentication details, relating to your QHub deployment. You will need to provide your Google Cloud [Service Account](https://cloud.google.com/iam/docs/service-accounts) credentials on the appropriate lines of the configuration file as shown below. 
 
 ```yaml
 security:
@@ -82,7 +82,7 @@ users:
       gid: 102
 ```
 
-### Provider Infrastructure
+### 3. Provider Infrastructure
 
 This section of the configuration file refers to the [kubernetes](https://kubernetes.io/) infrastructure deployment on GCP. Kubernetes is a cloud agnostic, portable, extensible, open-source platform for managing containerized workloads and services that facilitates both declarative configuration and automation. Kubernetes runs your workload by placing containers into [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) to run on [Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/#:~:text=Nodes,machine%2C%20depending%20on%20the%20cluster.&text=Typically%20you%20have%20several%20nodes,a%20node%20include%20the%20kubelet). A node may be a virtual or physical machine, depending on the cluster. The following configuration sets up a kubernetes deployment with [autoscaling](https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/) node groups. 
 
