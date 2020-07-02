@@ -5,32 +5,30 @@
 > Open source tooling for data science research, development, and deployment.
 
 
-QHub is an integrated data science environment designed and developed by scientists. It provides an [**Infrastructure as Code**](#What-is-Infrastructure-as-Code.) platform that simplifies the deployment of data science infrastructure for teams. 
+QHub is an integrated data science environment designed and developed by scientists. It provides an [**Infrastructure as Code**](#What-is-Infrastructure-as-Code.) platform that simplifies the deployment of data science infrastructure for teams. QHub is designed to make it easy to authenticate multiple groups and allow them to share their data and environments easily, resulting in a seamless and robust process of development and deployment within and among teams. 
 
 
 ## Core Ideas
 
-The core ideas that have led to the creation of QHub include achieving development that is:
+The core ideas that have led to the creation of QHub include:
 
 + **Open source** 
-+ **Scalable**
-+ **Robust**
-+ **Reproducible**
-
-
++ **Scalability**
++ **Robustness**
++ **Reproducibility**
 
 
 ### Open Source
 
-At the heart of QHub is the ability to serve the needs of large teams, with multiple users and development environments, and provide this service as open source. QHub is designed to make it easy to authenticate multiple groups and allow them to share their data and environments easily, resulting in a seamless and robust process of development and deployment within and among teams. 
+At the heart of QHub is the ability to serve the needs of large teams, with multiple users and development environments, and provide this valuable service as open source. 
 
 
 ### Robustness and Scalability 
 
 Built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/) and by robustly expanding the features of JupyterHub, QHub:
 
-+ allows users to take full advantage of scalability through [**Dask**](https://dask.org/). 
-+ provides the flexibility to choose from multiple cloud providers. 
++ allows users to take full advantage of scalability through [**Dask**](https://dask.org/)
++ provides the flexibility to choose from multiple cloud providers
 
 
 ### Flexibility and Reproducibility
@@ -38,12 +36,17 @@ Built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/) a
 QHub gives you the ability to select from available cloud providers: Amazon Web Services, Digital Ocean, and Google Cloud Platform. As a deployment environment, QHub handles many of the complexities assciated with cloud deployments and allows you to focus on your development and research. As a QHub user, you will define your environment and cloud deployments through a configuration file. QHub takes care of the rest, providing you with a smooth deployment process and maintenance. If you want to have full control over your deployment environment and customize it for your specific needs, QHub enables you to do that, as well. 
 
 
-+ If you are a general **user** (data scientist, researcher, softwaree engineer, etc.), 
-    + please see the detailed QHub documentation [**HERE**](#docs-for-users).
+### Documentation Designed for Multiple Audiences
+
+
+Documentation is an integral part of any technological tool. We have written the QHub Documentation designed for multiple audiences in an effort to provide the right amount of details for each audience based on their role while using QHub.
+
++ If you are a general **user** (data scientist, researcher, software engineer, etc.), 
+    + please see the documentation [**HERE**](#users).
 
 
 + If you are a **producer** (DevOps member, system architect or administrator, etc.), 
-    + please see a more technical documentation [**HERE**](#docs-for-devs). 
+    + please see the documentation [**HERE**](#producers). 
 
 
 ```{toctree}
@@ -54,4 +57,6 @@ docs/aws/index
 docs/do/index
 docs/gcp/index
 docs/faqs
+docs/users
+docs/producers
 ```
