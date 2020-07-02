@@ -22,7 +22,7 @@ At the heart of QHub is the ability to serve the needs of large teams, with mult
 
 ### 
 
-Built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/), QHub robustly expands the features of JupyterHub that:
+Built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/) and by robustly expanding the features of JupyterHub, QHub:
 
 + allows users to take full advantage of scalability through [**Dask**](https://dask.org/). 
 + provides the flexibility to choose from multiple cloud providers. 
@@ -36,8 +36,10 @@ QHub gives you the ability to select from available cloud providers: Amazon Web 
 + If you are a general **user** (data scientist, researcher, softwaree engineer, etc.), 
     + please see the detailed QHub documentation [**HERE**](#docs-for-users).
 
+
 + If you are a **producer** (DevOps member, system architect or administrator, etc.), 
     + please see a more technical documentation [**HERE**](#docs-for-devs). 
+
 
 ```{toctree}
 :maxdepth: 2
