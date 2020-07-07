@@ -7,7 +7,7 @@ We define the general user as those who want to take full advantage of distribut
  
 + **The Problem**
     + Data scientists often have to circumvent unlimited limitations of the tools and platforms they use for distributed computing. Most of their energy is spent trying to manage unstable development environments, deciphering cloud specific deployment details, and suffering from unsuccessful, as well as costly, deployments, keeping up with constantly changing tooling, resolving package conflicts, and handling authentication problems among others. 
-        + The creators of QHub are data scientsits, who have experienced such highly common frustrations on a daily basis and decided to work towards creating an open source tool that answers the need for seamless distributed computing. 
+        + The creators of QHub are data scientsits and DevOps engineers, who have experienced such highly common frustrations on a daily basis and decided to work towards creating an open source tool that answers the need for seamless distributed computing and deployment. 
     
     
 + **The Solution**
@@ -44,7 +44,7 @@ QHub streamlines and manages all the Kubernetes architecture detailed above and 
 
 ### Autoscaling 
 
-QHub enables the user to customize their environments for their needs easily and share them with other users in their team. Autoscaling of compute is straightforward with QHub. The ability to utilize [**Dask Workers**](https://distributed.dask.org/en/latest/worker.html) eliminates a lot of the problems that comes with working with big data. 
+QHub enables the user to customize their environments for their needs easily and share them with other users in their team. Autoscaling of compute is straightforward with QHub. The ability to utilize [**Dask Workers**](https://distributed.dask.org/en/latest/worker.html) eliminates a lot of the problems that come with working with big data. 
 
 
 ### Customizable Environments
