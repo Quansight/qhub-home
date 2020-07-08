@@ -5,12 +5,13 @@
 > Open source tooling for data science research, development, and deployment.
 
 
-QHub is an integrated data science environment designed and developed by scientists at Quansight to enable teams to build and maintain a cost effective and scalable comput/data science platform in the cloud. It provides an [**Infrastructure as Code**](#What-is-Infrastructure-as-Code.) platform that simplifies the deployment of data science infrastructure for teams. 
+
+QHub is an integrated data science environment designed and developed by scientists at Quansight. QHub aims to enable teams to build and maintain a cost effective and scalable comput/data science platform in the cloud. It provides an [**Infrastructure as Code**](#What-is-Infrastructure-as-Code.) platform that simplifies the deployment of data science infrastructure for teams. 
 
 
-## Why We Created QHub?
+## Why We Created QHub
 
-While JupyterHub is an excellent platform for shared computational environments and Dask enables researchers to scale computations beyond the limits of their local machines, deploying and maintaining a scalable cluster for teams with Dask on JupyterHub is a highly difficult task. QHub is designed to solve this problem. 
+While JupyterHub is an excellent platform for shared computational environments and Dask enables researchers to scale computations beyond the limits of their local machines. However, deploying and maintaining a scalable cluster for teams with Dask on JupyterHub is a highly difficult task. QHub is designed to solve this problem. 
 
 QHub makes it easy to autoscale computations, authenticate multiple groups and allow them to share their data and environments easily, resulting in a seamless and robust process of development and deployment within and among teams. 
 
@@ -48,10 +49,10 @@ Built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/) a
 QHub gives you the ability to select from available cloud providers: Amazon Web Services, Digital Ocean, and Google Cloud Platform. As a deployment environment, QHub handles many of the complexities assciated with cloud deployments and allows you to focus on your development and research. As a QHub user, you will define your environment and cloud deployments through a configuration file. QHub takes care of the rest, providing you with a smooth deployment process and maintenance. If you want to have full control over your deployment environment and customize it for your specific needs, QHub enables you to do that, as well. 
 
 
-### Documentation Designed for Multiple Audiences
+### Documentation Designed for Different Needs
 
 
-Documentation is an integral part of any technological tool. We have written the QHub Documentation designed for multiple audiences in an effort to provide the right amount of details for each audience based on their role while using QHub.
+Documentation is an integral part of any technological tool. We have written the QHub Documentation aiming to answer the needs for different audiences with an effort to provide the right amount of details for each audience based on their role while using QHub.
 
 + If you are a general **user** (data scientist, researcher, software engineer, etc.), 
     + please see the documentation [**HERE**](#users).
