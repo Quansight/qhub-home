@@ -43,10 +43,9 @@ Q|Hub streamlines and manages all the Kubernetes architecture detailed above and
 
 Autoscaling of compute is straightforward with Q|Hub. The ability to utilize [**Dask Workers**](https://distributed.dask.org/en/latest/worker.html) eliminates most of the problems that come with working with big data.
 
-You can autoscale your compute by autoscaling Dask workers on CPU and through Dask-Gateway integration. Soon, Q|Hub will have GPU support as well.
+You can scale your computations by autoscaling Dask workers on CPU and through Dask-Gateway integration. Soon, Q|Hub will have GPU support as well.
 
-  + 
-
++ Autoscaling Dask compute clusters for big data using any instance type, namely normal, high memory, and GPU.
 
 ### How to Create Conda Environments on Q|Hub
 
@@ -69,4 +68,32 @@ With Q|Hub, you can create and handle both prebuilt and ad-hoc conda environment
 
 ### How to Authenticate Users
 
-Q|hub authentication can be done using `Auth0` and `Github`.
+Q|hub authentication can be done using `Auth0` and `Github` and including the type of authentication in the provided configuration file template.
+
++ To configure the authentication for your cloud deployment, navigate to the security section in the provided configuration file template, seen below:
+
+## Security
+
+```yaml
+security:
+  authentication:
+    type: GitHub
+    config:
+      client_id: <CLIENT_ID>
+      client_secret: <CLIENT_SECRET>
+      oauth_callback_url: https://jupyter.do.qhub.dev/hub/oauth_callback
+  users:
+    <username>:
+      uid: 1000
+      primary_group: users
+    <username>:
+      uid: 1001
+      primary_group: admin
+  groups:
+    users:
+      gid: 100
+    admin:
+      gid: 101
+```
+
+Fill in the section with your cloud account credentials and authentication type (`Github` or `Auth0`) for configuring security for your qhub deployment.
