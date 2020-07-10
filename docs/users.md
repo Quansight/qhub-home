@@ -2,7 +2,7 @@
 
 We define the general user as those who want to take full advantage of distributed computing without worrying about its maintenance. The user is provided the Jupyter platform interface while Q|Hub handles all the complexities of [**Kubernetes**](https://kubernetes.io/docs/home/), a cloud-agnostic and open source orchestration system for managing containerized workloads and services for deployments. Q|Hub uses Kubernetes architecture on the backend for cloud computing that works seamlessly with the cloud provider of your choice.
 
-## Why Your Team Should Use Q|Hub
+## **Why Your Team Should Use Q|Hub**
 
 ### The Problem
 
@@ -25,7 +25,7 @@ The Q|Hub architecture, operating on the familiar Jupyter interface, brings toge
 
 + [**Conda**](https://docs.conda.io/en/latest/) **as an integral part of Q|Hub's architectural design**
 
-  + [**Conda Environments**](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) enables the user to create their custom environments tailored for their teams' needs. Environment creation is independent from [**docker container**](https://www.docker.com/resources/what-container) creations which provides a substantial benefit in compute speed.[**Dask workers**](https://distributed.dask.org/en/latest/worker.html) can use any environment.
+  + [**Conda Environments**](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) enables the user to create their custom environments tailored for their teams' needs. Q|Hub uses a new approach to distributed environments by using [**conda-store**](https://github.com/quansight/conda-store). Environment creation is independent from [**docker container**](https://www.docker.com/resources/what-container) creations which provides a substantial benefit in speed. [**Dask workers**](https://distributed.dask.org/en/latest/worker.html) can use any environment.
 
 + **Kubernetes behind the scene**
 
