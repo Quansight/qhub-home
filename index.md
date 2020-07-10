@@ -4,17 +4,17 @@
 
 > Open source tooling for data science research, development, and deployment.
 
-Q|Hub is an integrated data science environment designed and developed by scientists at Quansight. Q|Hub enables teams to build and maintain a cost effective and scalable comput/data science platform in the cloud. It provides an [**Infrastructure as Code**](https://en.wikipedia.org/wiki/Infrastructure_as_code) platform that streamlines the deployment of data science infrastructure for teams. 
+Q|Hub is an integrated data science environment designed and developed by scientists at Quansight. Q|Hub enables teams to build and maintain a cost effective and scalable comput/data science platform in the cloud. It provides an [**Infrastructure as Code**](https://en.wikipedia.org/wiki/Infrastructure_as_code) platform that streamlines the deployment of data science infrastructure for teams.
 
 ## Why We Created Q|Hub
 
-Deploying and maintaining a scalable computational platform in the cloud is difficult. There is a critical need in organizations for a shared compute platform that is flexible, accessible, and scalable. JupyterHub is an excellent platform for shared computational environments and Dask enables researchers to scale computations beyond the limits of their local machines. However, deploying and maintaining a scalable cluster for teams with Dask on JupyterHub is a highly difficult task. Q|Hub is designed to solve this problem. 
+Deploying and maintaining a scalable computational platform in the cloud is difficult. There is a critical need in organizations for a shared compute platform that is flexible, accessible, and scalable. JupyterHub is an excellent platform for shared computational environments and Dask enables researchers to scale computations beyond the limits of their local machines. However, deploying and maintaining a scalable cluster for teams with Dask on JupyterHub is a highly difficult task. Q|Hub is designed to solve this problem.
 
 ## Core Ideas
 
 The core ideas that have quided the creation of QHub are:
 
-+ **Open source** 
++ **Open source**
 + **Cost-Effectiveness**
 + **Scalability**
 + **Robustness**
@@ -25,7 +25,7 @@ Q|Hub provides teams with the following:
 + Easy installation and maintenance controlled by a single cofniguration file
 + Autoscaling JupyterHub installation deployed on the cloud provider of your choice
 + Option to choose from multiple compute instances (i.e. normal, high mem, gpu etc)
-+ Autoscaling Dask compute clusters for big data using any instance type 
++ Autoscaling Dask compute clusters for big data using any instance type
 + Shell access and remote editing access (i.e. VSCode remote) through KubeSSH
 + Full linux style permissioning allowing for different shared folders for different groups of users
 + Robust compute environment handling allowing both prebuilt and ad-hoc environment creation
@@ -37,7 +37,7 @@ At the heart of QHub is the ability to serve the needs of teams with multiple de
 
 ### Cost-Effective
 
-Cloud providers currently integrate well with kubernetes and provide autoscaling. Q|Hub takes advantage of this by allowing users to request on-demand dask clusters. These clusters can be scheduled on arbitrary compute resources, such as high memory, high CPU, and GPU instances in a cost effective manner using kubernetes node groups. 
+Cloud providers currently integrate well with kubernetes and provide autoscaling. Q|Hub takes advantage of this by allowing users to request on-demand dask clusters. These clusters can be scheduled on arbitrary compute resources, such as high memory, high CPU, and GPU instances in a cost effective manner using kubernetes node groups.
 
 ### Robust and Scalable
 
@@ -49,7 +49,7 @@ Q|Hub gives you the ability to select from available cloud providers: [**Amazon 
 
 ### Q|Hub Technology Stack
 
-Q|Hub's technology stack is an integration of the following existing open source libraries: 
+Q|Hub's technology stack is an integration of the following existing open source libraries:
 
 + [**Terraform**](https://www.terraform.io/intro/index.html), a tool for building , changing, and versioning infrastructure.
 +[**Kubernetes**](https://kubernetes.io/docs/home/), a cloud-agnostic and open source orchestration system
@@ -69,7 +69,6 @@ Q|Hub empowers users not as familiar with cloud providers and associated tools w
 
 + If you are a data scientist, researcher, software engineer, etc.,
     + please see the documentation [**here**](#users).
-
 
 + If you are a DevOps engineer, system architect or admin, etc.,
     + please see the documentation [**here**](#producers).
