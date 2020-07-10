@@ -1,22 +1,22 @@
 # Q|Hub for Teams
 
-We define the general user as those who want to take full advantage of distributed computing without worrying about its maintenance. The user is provided the Jupyter platform interface while Q|Hub handles all the complexities of [**Kubernetes**](https://kubernetes.io/docs/home/). Kubernetes is a cloud-agnostic and open source orchestration system for managing containerized workloads and services for deployments. Q|Hub uses Kubernetes architecture on the backend for cloud computing that works seamlessly with your choice of a cloud provider.
+We define the general user as those who want to take full advantage of distributed computing without worrying about its maintenance. The user is provided the Jupyter platform interface while Q|Hub handles all the complexities of [**Kubernetes**](https://kubernetes.io/docs/home/), a cloud-agnostic and open source orchestration system for managing containerized workloads and services for deployments. Q|Hub uses Kubernetes architecture on the backend for cloud computing that works seamlessly with the cloud provider of your choice.
 
 ## Why Your Team Should Use Q|Hub
 
 ### The Problem
 
-Data scientists often have to circumvent unlimited limitations of the tools and platforms they use for distributed computing. Most of their energy is spent trying to manage unstable development environments, deciphering cloud specific deployment details, and suffering from unsuccessful, as well as costly, deployments, keeping up with constantly changing tooling, resolving package conflicts, and handling authentication problems among others.
+Data scientists often have to circumvent limitations of the tools and platforms they use for distributed computing. Most of their energy is spent trying to manage unstable development environments, deciphering cloud specific details, and suffering from unsuccessful, as well as costly, deployments, keeping up with constantly changing tooling, resolving package conflicts, and handling authentication problems among others.
 
 The creators of Q|Hub are data scientsits and DevOps engineers, who have experienced such highly common frustrations on a daily basis and decided to work towards creating an open source tool that answers the need for seamless distributed computing and deployment.
 
 ### The Solution
 
-If your goal is to have in your service a data science platform that answers many of the pain points of *doing data science* seamlessly on the cloud, Q|Hub is the tool for your team. Q|Hub offers a robust data science environment that can be easily tailored to suit your organization's needs.
+Q|Hub is the tool for teams that experience many of the pain points of doing data science and want to seamlessly on the cloud with minimal maintenance. Q|Hub offers a robust data science environment that can be easily tailored to suit your organization's needs.
 
 ### QHub Architecture
 
-The Q|Hub architecture operating on the familiar Jupyter interface brings together some of the most efficient components of data science and cloud deployment. Here is a brief high level description of the components that Q|Hub brings to the user if you are curious how the Q|Hub architecture is set up:
+The Q|Hub architecture, operating on the familiar Jupyter interface, brings together some of the most efficient components of data science and cloud deployment. Here is a high level description of the components that Q|Hub brings to the user:
 
 + **Q|Hub makes Dask a fully integrated part of its architecture**
 
@@ -25,7 +25,7 @@ The Q|Hub architecture operating on the familiar Jupyter interface brings togeth
 
 + [**Conda**](https://docs.conda.io/en/latest/) **as an integral part of Q|Hub's architectural design**
 
-  + [**Conda Environments**](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) enables the user to create their custom environments tailored for their teams' needs.
+  + [**Conda Environments**](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) enables the user to create their custom environments tailored for their teams' needs. Environment creation is independent from [**docker container**](https://www.docker.com/resources/what-container) creations which provides a substantial benefit in compute speed.[**Dask workers**](https://distributed.dask.org/en/latest/worker.html) can use any environment.
 
 + **Kubernetes behind the scene**
 
@@ -37,16 +37,36 @@ The Q|Hub architecture operating on the familiar Jupyter interface brings togeth
     + Users who need to provide external access to their Kubernetes services create an Ingress resource that defines rules. The Ingress controller can then automatically program a front‑end load balancer to enable Ingress configuration.
 
 Q|Hub streamlines and manages all the Kubernetes architecture detailed above and delivers a smooth deployment process to its users through its intuitive interface.
-![QHub Architecture](../images/high_level_architecture.png)
+![QHub_Architecture](../images/high_level_architecture.png)
 
-### Autoscaling
+### How to Autoscale on Q|Hub
 
-Q|Hub enables the user to customize their environments for their needs easily and share them with other users in their team. Autoscaling of compute is straightforward with Q|Hub. The ability to utilize [**Dask Workers**](https://distributed.dask.org/en/latest/worker.html) eliminates most of the problems that come with working with big data.
+Autoscaling of compute is straightforward with Q|Hub. The ability to utilize [**Dask Workers**](https://distributed.dask.org/en/latest/worker.html) eliminates most of the problems that come with working with big data.
 
-### Customizable Environments
+You can autoscale your compute by autoscaling Dask workers on CPU and through Dask-Gateway integration. Soon, Q|Hub will have GPU support as well.
 
-You can define multiple development environments and share them with your team without worrying about stability or conflicts.
+  + 
 
-### Authentication
+
+### How to Create Conda Environments on Q|Hub
+
+Q|Hub enables you to customize environments for your needs and share them with other users in your team without worrying about stability or conflicts. This feature allows the deployment of a scalable cloud-agnostic compute environment suitable for teams.
+
+With Q|Hub, you can create and handle both prebuilt and ad-hoc conda environments in a robust way. To learn how to create conda environments, please visit [this page](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
++ **Distributing a conda environment with `conda-store` on Q|Hub**
+  + QHub is experimenting with a new way of distributing environments using [**conda-store**](https://github.com/quansight/conda-store). `conda-store` declaratively builds conda environments by watching a directory of `environment.yaml` files.
+
+  + Each environment configuration is a `environment.<filename>`, mapping to a conda environment definition file. If you need to pin a specific version, you should include it in the definition. Upon changing an environment definition, you should expect 1-10 minutes upon deployment of the configuration for the environment to appear.
+
+  + `conda-store` environments currently require each environment to include the following packages and versions:
+
+        ipykernel
+        ipywidgets
+        dask==2.14.0
+        distributed==2.14.0
+        dask-gateway==0.6.1
+
+### How to Authenticate Users
 
 Q|hub authentication can be done using `Auth0` and `Github`.

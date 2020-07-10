@@ -60,7 +60,7 @@ Q|Hub's technology stack is an integration of the following existing open source
   + [Dask-Gateway](https://gateway.dask.org/), a secure, multi-tenant server for managing Dask clusters
 + [**GitHub Actions**](https://docs.github.com/en/actions), a tool to automate, customize, and execute your software development workflows in your GitHub repository,
 
-as well as some newly created open source libraries: [**KubeSSH**](https://github.com/yuvipanda/kubessh), [**Jupyter-Videochat**](https://github.com/yuvipanda/jupyter-videochat), Conda-Store, and Conda-Docker.
+as well as some newly created open source libraries: [**KubeSSH**](https://github.com/yuvipanda/kubessh), [**Jupyter-Videochat**](https://github.com/yuvipanda/jupyter-videochat), [**conda-store**](https://github.com/quansight/conda-store), and Conda-Docker.
 
 ### Q|Hub is for Teams
 
