@@ -57,7 +57,7 @@ Q|Hub's technology stack is an integration of the following existing open source
 + [**JupyterHub**](https://jupyter.org/hub), a shareable compute platform for data science
 + [**JupyterLab**](https://jupyterlab.readthedocs.io/en/stable/)a web-based interactive development environment for Jupyter notebooks
 + [**Dask**](https://docs.dask.org/en/latest/), a scalable and flexible  library for parallel computing in Python
-    + [Dask-Gateway](https://gateway.dask.org/), a secure, multi-tenant server for managing Dask clusters
+  + [Dask-Gateway](https://gateway.dask.org/), a secure, multi-tenant server for managing Dask clusters
 + [**GitHub Actions**](https://docs.github.com/en/actions), a tool to automate, customize, and execute your software development workflows in your GitHub repository,
 
 as well as some newly created open source libraries: [**KubeSSH**](https://github.com/yuvipanda/kubessh), [**Jupyter-Videochat**](https://github.com/yuvipanda/jupyter-videochat), Conda-Store, and Conda-Docker.
@@ -68,10 +68,10 @@ Q|Hub provides teams with features, such as shared file systems between users, c
 Q|Hub empowers users not as familiar with cloud providers and associated tools with the ability to make infrastructure and development environment changes, such as adding a new package and making it available system-wide for all users. With such critical features, Q|Hub reduces their burden of maintaining multiple environments and configuration of cloud deployments and allows teams to focus on development.
 
 + If you are a data scientist, researcher, software engineer, etc.,
-    + please see the documentation [**here**](#users).
+  + please see the documentation [**here**](#users).
 
 + If you are a DevOps engineer, system architect or admin, etc.,
-    + please see the documentation [**here**](#producers).
+  + please see the documentation [**here**](#producers).
 
 ```{toctree}
 :maxdepth: 2
