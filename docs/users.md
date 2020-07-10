@@ -72,28 +72,24 @@ Q|hub authentication can be done using `Auth0` and `Github` and including the ty
 
 + To configure the authentication for your cloud deployment, navigate to the security section in the provided configuration file template, seen below:
 
-## Security
-
-```yaml
-security:
-  authentication:
-    type: GitHub
-    config:
-      client_id: <CLIENT_ID>
-      client_secret: <CLIENT_SECRET>
-      oauth_callback_url: https://jupyter.do.qhub.dev/hub/oauth_callback
-  users:
-    <username>:
-      uid: 1000
-      primary_group: users
-    <username>:
-      uid: 1001
-      primary_group: admin
-  groups:
-    users:
-      gid: 100
-    admin:
-      gid: 101
-```
+        security:
+        authentication:
+            type: GitHub
+            config:
+                client_id: <CLIENT_ID>
+                client_secret: <CLIENT_SECRET>
+                oauth_callback_url: <https://jupyter.do.qhub.dev/hub/oauth_callback>
+        users:
+            username:
+                uid: 1000
+                primary_group: users
+            username:
+                uid: 1001
+                primary_group: admin
+        groups:
+            users:
+                gid: 100
+            admin:
+                gid: 101
 
 Fill in the section with your cloud account credentials and authentication type (`Github` or `Auth0`) for configuring security for your qhub deployment.
