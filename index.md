@@ -24,12 +24,12 @@ Q|Hub provides teams with the following:
 
 + Easy installation and maintenance controlled by a single cofniguration file
 + Autoscaling JupyterHub installation deployed on the cloud provider of your choice
-+ Option to choose from multiple compute instances (i.e. normal, high mem, gpu etc)
++ Option to choose from multiple compute instances, namely normal, high mem, gpu etc.
 + Autoscaling Dask compute clusters for big data using any instance type
 + Shell access and remote editing access (i.e. VSCode remote) through KubeSSH
 + Full linux style permissioning allowing for different shared folders for different groups of users
 + Robust compute environment handling allowing both prebuilt and ad-hoc environment creation
-+ Integrated video conferencing (using Jitsi)
++ Integrated video conferencing, using Jitsi
 
 ### Open Source
 

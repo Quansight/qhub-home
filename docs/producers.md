@@ -4,11 +4,11 @@ Q|Hub admins are **DevOps engineers**, **system administrators**, **scientists**
 
 > The content below is particularly for Q|Hub producers and those looking to learn more about the Q|Hub architecture.
 
-## **Why Q|Hub**
+## Why Q|Hub
 
 With Q|Hub, managing configurable data science environments and attaining seamless deployment with [**Github Actions**](https://github.com/marketplace/actions/deployment-action) become remarkably easy. Let's look at how you can customize Q|Hub for a data science architecture that meets  **your team's needs**.
 
-### **Staging & Production Environments and Shell Access**
+### Staging & Production Environments and Shell Access
 
 TODO: 
 Staging & Production JupyterHub deploys
@@ -21,7 +21,7 @@ Robust compute environment handling that will allow for both prebuilt and ad-hoc
 
 -----------
 
-## **Q|Hub Architecture**
+## Q|Hub Architecture
 
  In addition to a robust integration of [**Dask**](https://dask.org/) and a new way of distributing environments with [**conda-store**](https://github.com/quansight/conda-store), Q|Hub brings together some of the widely used cloud deployment components in its architecture, as depicted in the diagram below. Q|Hub integrates [**Network File System (NFS)**](https://en.wikipedia.org/wiki/Network_File_System) protocol is used to allow Kubernetes applications to access storage. Files in containers in a [**Kubernetes Pod**](https://kubernetes.io/docs/concepts/workloads/pods/pod/) are not persistent, which means if a container crashes, [**kubelet**](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#:~:text=Synopsis,object%20that%20describes%20a%20pod) will restart the container, however, the files will not be preserved. The [**Kubernetes Volume**](https://kubernetes.io/docs/concepts/storage/volumes/#types-of-volumes) abstraction that Q|Hub utilizes solves this problem. NFS shares files directly from a container in a Kubernetes Pod, and sets up a [**Kubernetes Persistent Volume**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) accessed via NFS. Kubernetes' built‑in configuration for HTTP load balancing [**Ingress**](https://kubernetes.io/docs/concepts/services-networking/ingress/) defines and controls the rules for external connectivity to Kubernetes services. Users who need to provide external access to their Kubernetes services create an Ingress resource that defines rules.
 
@@ -38,7 +38,7 @@ Q|Hub architecture and features allows you to:
 
 + meet the needs of multiple teams and control permissions
 
-## **Installation**
+## Installation
 
 You can install Q|Hub through `pip`:
 
@@ -46,18 +46,18 @@ You can install Q|Hub through `pip`:
 
 After the installation, the neext step is to configure Q|Hub.
 
-## **Configuration**
+## Configuration
 
 Q|Hub is entirely controlled from a configuration file, which allows you to manage multiple environments and multiple teams, as well as their permissions and authorization in a robust way.
 
 + **The Configuration File**
   + Q|Hub comes with configuration file templates for each of the cloud providers it currently supports: **Amazon Web Services (AWS)**, **Digital Ocean (DO)**, and **Google Cloud Platform (GCP)**. The templates can be found [**here**]('#').
 
-## **Cloud Deployment on Q|Hub**
+## Cloud Deployment on Q|Hub
 
 Q|Hub deployments on the clouds follow the architectural structure shown for ech provider in the diagrams below. To make cloud depeloyments, the respective configuration file needs to be configured based on the user's cloud provider account credentials, as well as the details of users they would allow access to the deployment.
 
-### **AWS Deployment**
+### AWS Deployment
 
 The configuration file template for AWS can be found at the following path:
 
@@ -65,7 +65,7 @@ The configuration file template for AWS can be found at the following path:
 
 [QHub AWS Architecture](#)
 
-### **DO Deployment**
+### DO Deployment
 
 The configuration file template for Digital Ocean can be found at the following path:
 
@@ -73,7 +73,7 @@ The configuration file template for Digital Ocean can be found at the following 
 
 [QHub DO Architecture](#)
 
-### **GCP Deployment**
+### GCP Deployment
 
 The configuration file template for GCP can be found at the following path:
 
@@ -81,11 +81,11 @@ The configuration file template for GCP can be found at the following path:
 
 [QHub GCP Architecture](#)
 
-### **Autoscaling**
+### Autoscaling
 
 With Q|Hub, system admins can customize and maintain their teams' compute needs and environments. The autoscaling of computers (Kubernetes and Pods) is done through Dask autoscaling with CPU & GPU workers.
 
-### **Authentication**
+### Authentication
 
 Q|Hub uses Github for authentication. 
 
