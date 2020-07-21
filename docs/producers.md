@@ -8,18 +8,11 @@ Q|Hub admins are **DevOps engineers**, **system administrators**, **scientists**
 
 With Q|Hub, managing configurable data science environments and attaining seamless deployment with [**Github Actions**](https://github.com/marketplace/actions/deployment-action) become remarkably easy. Let's look at how you can customize Q|Hub for a data science architecture that meets  **your team's needs**.
 
-### Staging & Production Environments and Shell Access
+## Staging & Production Environments and Shell Access
 
-TODO: 
-Staging & Production JupyterHub deploys
-Staging & Production shell access
+With Q|Hub, you can have shell access and remote editing access through KubeSSH. The complete linux style permissions allows for different shared folders for different groups of users.
 
-Shell access and remote editing access (i.e. VSCode remote) through KubeSSH
-Full linux style permissioning allowing for different shared folders for different groups of users  
-
-Robust compute environment handling that will allow for both prebuilt and ad-hoc environment creation.
-
------------
+Staging and production environments and JupyterHub deploys allow your team to test the production process.
 
 ## Q|Hub Architecture
 
@@ -44,7 +37,7 @@ You can install Q|Hub through `pip`:
 
     pip install qhub-ops
 
-After the installation, the neext step is to configure Q|Hub.
+After the installation, the next step is to configure Q|Hub.
 
 ## Configuration
 
@@ -55,7 +48,7 @@ Q|Hub is entirely controlled from a configuration file, which allows you to mana
 
 ## Cloud Deployment on Q|Hub
 
-Q|Hub deployments on the clouds follow the architectural structure shown for ech provider in the diagrams below. To make cloud depeloyments, the respective configuration file needs to be configured based on the user's cloud provider account credentials, as well as the details of users they would allow access to the deployment.
+Q|Hub deployments on the clouds follow the architectural structure shown for ech provider in the diagrams below. To make cloud deployments, the respective configuration file needs to be configured based on the user's cloud provider account credentials, as well as the details of users they would allow access to the deployment.
 
 ### AWS Deployment
 
@@ -87,7 +80,7 @@ With Q|Hub, system admins can customize and maintain their teams' compute needs 
 
 ### Authentication
 
-Q|Hub uses Github for authentication. 
+Q|Hub uses Github for authentication.
 
 ```{toctree}
 :maxdepth: 2
