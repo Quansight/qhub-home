@@ -4,7 +4,7 @@
 
 > Open source tooling for data science research, development, and deployment.
 
-Q|Hub is an integrated data science environment designed and developed by scientists at Quansight. Q|Hub enables teams to build and maintain a cost effective and scalable comput/data science platform in the cloud. It provides an [**Infrastructure as Code**](https://en.wikipedia.org/wiki/Infrastructure_as_code) platform that streamlines the deployment of data science infrastructure for teams.
+Q|Hub is an integrated data science environment designed and developed by scientists at Quansight. Q|Hub enables teams to build and maintain a cost effective and scalable compute/data science platform in the cloud. It provides an [**Infrastructure as Code**](https://en.wikipedia.org/wiki/Infrastructure_as_code) platform that streamlines the deployment of data science infrastructure for teams.
 
 ## Why We Created Q|Hub
 
@@ -12,7 +12,7 @@ Deploying and maintaining a scalable computational platform in the cloud is diff
 
 ## Core Ideas
 
-The core ideas that have quided the creation of QHub are:
+The core ideas that have guided the creation of QHub are:
 
 + **Open source**
 + **Cost-Effectiveness**
@@ -22,12 +22,12 @@ The core ideas that have quided the creation of QHub are:
 
 Q|Hub provides teams with the following:
 
-+ Easy installation and maintenance controlled by a single cofniguration file
++ Easy installation and maintenance controlled by a single configuration file
 + Autoscaling JupyterHub installation deployed on the cloud provider of your choice
 + Option to choose from multiple compute instances, namely normal, high mem, gpu etc.
 + Autoscaling Dask compute clusters for big data using any instance type
 + Shell access and remote editing access (i.e. VSCode remote) through KubeSSH
-+ Full linux style permissioning allowing for different shared folders for different groups of users
++ Full linux style permissions allowing for different shared folders for different groups of users
 + Robust compute environment handling allowing both prebuilt and ad-hoc environment creation
 + Integrated video conferencing, using Jitsi
 
@@ -45,7 +45,7 @@ Q|Hub makes it easy to autoscale computations, authenticate multiple teams, and 
 
 ### Flexible and Reproducible
 
-Q|Hub gives you the ability to select from available cloud providers: [**Amazon Web Services**](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v), [**Digital Ocean**](https://try.digitalocean.com/developerbrand/?_dkitrig=Cloud), and [**Google Cloud Platform**](https://cloud.google.com/gcp/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1009135&utm_content=text-ad-lpsitelinkCCexp2-any-DEV_c-CRE_113120492527-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+BMM+~+Google+Cloud+Platform-KWID_43700009942847394-kwd-26415333781&utm_term=KW_%2Bgoogle%20%2Bcloud%20%2Bplatform-ST_%2Bgoogle+%2Bcloud+%2Bplatform&gclid=Cj0KCQjwgJv4BRCrARIsAB17JI7UQuHQaqsIKTM_mVWL86lIdpLPyMeIN6aJwPslBC8a-AToO56Fa4caAtsGEALw_wcB). Q|Hub handles the complexities assciated with cloud deployments and allows you to focus on your development and research. As a Q|Hub user, you will define your environment and deployment through a configuration file. Q|Hub takes care of the rest, providing you with a smooth deployment process and maintenance. If you want to have full control over your deployment environment and customize it for your specific needs, Q|Hub enables you to do that, as well.
+Q|Hub gives you the ability to select from available cloud providers: [**Amazon Web Services**](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v), [**Digital Ocean**](https://try.digitalocean.com/developerbrand/?_dkitrig=Cloud), and [**Google Cloud Platform**](https://cloud.google.com/gcp/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1009135&utm_content=text-ad-lpsitelinkCCexp2-any-DEV_c-CRE_113120492527-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+BMM+~+Google+Cloud+Platform-KWID_43700009942847394-kwd-26415333781&utm_term=KW_%2Bgoogle%20%2Bcloud%20%2Bplatform-ST_%2Bgoogle+%2Bcloud+%2Bplatform&gclid=Cj0KCQjwgJv4BRCrARIsAB17JI7UQuHQaqsIKTM_mVWL86lIdpLPyMeIN6aJwPslBC8a-AToO56Fa4caAtsGEALw_wcB). Q|Hub handles the complexities associated with cloud deployments and allows you to focus on your development and research. As a Q|Hub user, you will define your environment and deployment through a configuration file. Q|Hub takes care of the rest, providing you with a smooth deployment process and maintenance. If you want to have full control over your deployment environment and customize it for your specific needs, Q|Hub enables you to do that, as well.
 
 ### Q|Hub Technology Stack
 
