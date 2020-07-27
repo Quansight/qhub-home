@@ -41,7 +41,7 @@ Cloud providers currently integrate well with kubernetes and provide autoscaling
 
 ### Robust and Scalable
 
-Q|Hub makes it easy to autoscale computations, authenticate multiple teams, and allow them to share their data and environments easily, resulting in a seamless and robust process of development and deployment within and among teams. Q|Hub is built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/). What differentiates Q|Hub from its alternatives is its ability to scale. Q|Hub allows users to take full advantage of scalability through [**Dask**](https://dask.org/) in a robust way.
+Q|Hub is built on top of [**JupyterHub**](https://jupyterhub.readthedocs.io/en/stable/). What differentiates Q|Hub from its alternatives is its ability to scale. Q|Hub allows users to take full advantage of scalability through [**Dask**](https://dask.org/) in a robust way. Q|Hub makes it easy to autoscale computations, authenticate multiple teams, and allow them to share their data and environments easily, resulting in a seamless and robust process of development and deployment within and among teams.
 
 ### Flexible and Reproducible
 
