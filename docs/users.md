@@ -2,19 +2,17 @@
 
 Efficient data-driven teams take full advantage of distributed computing without worrying about its maintenance. The user is provided the Jupyter platform interface while QHub handles all the complexities of [**Kubernetes**](https://kubernetes.io/docs/home/), a cloud-agnostic and open source orchestration system for managing containerized workloads and services for deployments. QHub uses Kubernetes architecture on the backend for cloud computing that works seamlessly with the cloud provider of your choice.
 
-## **Why Your Team Should Use QHub**
-
-### The Solution
-
-QHub is the tool for teams that experience many of the pain points of doing data science and want to seamlessly on the cloud with minimal maintenance. QHub offers a robust data science environment that can be easily tailored to suit your organization's needs.
-
+## Why Your Team Should Use QHub
 
 ### The Problem
 
 Data scientists often have to circumvent limitations of the tools and platforms they use for distributed computing. Most of their energy is spent trying to manage unstable development environments, deciphering cloud specific details, and suffering from unsuccessful, as well as costly, deployments, keeping up with constantly changing tooling, resolving package conflicts, and handling authentication problems among others.
 
-The creators of QHub are data scientsits and DevOps engineers, who have experienced such highly common frustrations on a daily basis and decided to work towards creating an open source tool that answers the need for seamless distributed computing and deployment.
+The creators of QHub are data scientists and DevOps engineers, who have experienced such highly common frustrations on a daily basis and decided to work towards creating an open source tool that answers the need for seamless distributed computing and deployment.
 
+### The Solution
+
+QHub is the tool for teams that experience many of the pain points of doing data science and want to seamlessly on the cloud with minimal maintenance. QHub offers a robust data science environment that can be easily tailored to suit your organization's needs.
 
 ### QHub Architecture
 
@@ -36,7 +34,7 @@ The QHub architecture, operating on the familiar Jupyter interface, brings toget
   + Running containers together in a pod often makes file share between those containers a necessity. Files in a container are ephemeral, which means if a container crashes, [**kubelet**](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#:~:text=Synopsis,object%20that%20describes%20a%20pod) will restart the container, however, the files will not be preserved. The [**Kubernetes Volume**](https://kubernetes.io/docs/concepts/storage/volumes/#types-of-volumes) abstraction solves this problem.
   + NFS shares files directly from a container in a Kubernetes Pod, and sets up a [**Kubernetes Persistent Volume**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) accessed via NFS.
   + Kubernetes has a built‑in configuration for HTTP load balancing, called [**Ingress**](https://kubernetes.io/docs/concepts/services-networking/ingress/) that defines and controls the rules for external connectivity to Kubernetes services.
-    + Users who need to provide external access to their KuberneteQ|Hube type, namely normal, high memory, and GPU.
+    + Users who need to provide external access to their Kubernetes type, namely normal, high memory, and GPU.
 
 ### How to Create Conda Environments on QHub
 
