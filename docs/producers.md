@@ -120,3 +120,43 @@ docs/aws/index
 docs/do/index
 docs/gcp/index
 ```
+
+## Using Dask in Qhub
+
+### Spinning up a Remote Cluster
+The following code shows how a cluster can be spun up programatically in Qhub. (Editorial Comment:  I don't think the following code works by default, but I believe a simple tutorial like this would be very valuable to qhub users.)
+```
+import dask_gateway
+
+gateway = dask_gateway.Gateway()
+
+# Specify cluster configuration
+options = gateway.cluster_options()
+options.environment = conda_env               # Name of conda environment for workers
+options.profile = worker_type                 # Instance size, worker configuration name  
+
+# Create Dask Cluster
+cluster = gateway.new_cluster(options)
+client = Client(cluster)
+logger.info(f"client: {client}")
+
+if os.getenv("JUPYTERHUB_SERVICE_PREFIX"):
+    print(cluster.dashboard_link)
+
+cluster.scale(n_workers)
+client.wait_for_workers(1)
+```
+
+### Spinning up a Local Cluster
+If the user is content to use the server running qhub's local resources for your dask cluster, you may spin up a LocalCluster in the typical way.
+```
+from dask.distributed import LocalCluster, Client
+
+# Configure and Create Dask Cluster
+cluster = LocalCluster(n_workers=4, memory_limit='1GB')
+client = Client(cluster)
+
+# View Dask Dashboard for LocalCluster
+print(client.dashboard_link)  # e.g. http://127.0.0.1:8787/status 
+```
+To access the dask dashboard or any other server running on localhost and listening on a port, you can make use of jupyter-server-proxy.  Simply add `/proxy/<port>` to access any port listening on the local machine.  E.g. If you want to visit the qhub local dask dashboard link http://127.0.0.1:8787/status after having spun up a LocalCluster, and your jupyterlab qhub instance is accessible at myqhub.org/user/myuser/lab, you would visit myqhub.org/user/myuser/proxy/8787/status to access the local Dask cluster url.  For more info about accessing arbitrary ports or hosts in qhub via jupyter-server-proxy, visit https://jupyter-server-proxy.readthedocs.io/en/latest/arbitrary-ports-hosts.html.
